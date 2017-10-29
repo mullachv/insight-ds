@@ -1,3 +1,9 @@
+# Author: V. Mullachery
+# Copyright, All rights reserved
+#
+# Recipient identified by CMTE_ID. In order to record the contributions to
+# each recipient by zip and date, I use dictionaries
+#
 from extras.utils import *
 from augmented_node import AugTreeNode
 from collections import defaultdict
@@ -10,12 +16,12 @@ class Recipient(object):
         #By zip
         self.ncontribs_by_zip = defaultdict(int) #num of contribs by zip
         self.contrib_amts_by_zip = defaultdict(float) #amount of contrib by zip
-        self.contributions_by_zip = {} #augmented tree
+        self.contributions_by_zip = {} #dictionary of augmented tree
 
         #By date
         self.ncontribs_by_date = defaultdict(int)
         self.contrib_amts_by_date = defaultdict(int)
-        self.contributions_by_date = {} #augmented tree
+        self.contributions_by_date = {} #dictionary of augmented tree
 
     def update(self, rec):
         if rec:
